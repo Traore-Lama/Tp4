@@ -41,7 +41,9 @@ public class Menu
                     {
                         for (int j = 0; j < unTab[i].length; j++)
                         {
-
+                            //Comparer l'indice de la lettre de mdp est la comparer a l'indice unTab[i][j]
+                            //Si l'indice est present dans unTab alors il deviens l'indice present dans unTab
+                            //Sinon si il n'est pas present dans unTab alors mettre "?"
                         }
                     }
                     System.out.print("Mdp crypte : ");
