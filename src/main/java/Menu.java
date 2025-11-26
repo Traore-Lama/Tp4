@@ -46,7 +46,7 @@ public class Menu
                             //Sinon si il n'est pas present dans unTab alors mettre "?"
                         }
                     }
-                    System.out.print("Mdp crypte : ");
+                    System.out.print("Mdp crypte : ");// Recuperation du mdp apres son passage dans unTab
 
 
                     break;
