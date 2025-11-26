@@ -8,7 +8,7 @@ public class Menu
     static int[] tabExo3;
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
+        Scanner bg = new Scanner(System.in);
         do
         {
             do
@@ -18,7 +18,7 @@ public class Menu
                 System.out.println("3 - Exercice n°3");
                 System.out.println("0 - Quitter");
                 System.out.print("Votre choix : ");
-                choix = scanner.nextInt();
+                choix = bg.nextInt();
             } while (choix > 4);
 
             switch (choix)
@@ -34,6 +34,18 @@ public class Menu
                     RemplirTablo();
 
                     // A vous de jouer
+                    String mdp;
+                    System.out.println("Saisir votre Mdp : ");
+                    mdp = bg.nextLine();
+                    for (int i = 0; i < unTab.length; i++)
+                    {
+                        for (int j = 0; j < unTab[i].length; j++)
+                        {
+
+                        }
+                    }
+                    System.out.print("Mdp crypte : ");
+
 
                     break;
                 case 2:
