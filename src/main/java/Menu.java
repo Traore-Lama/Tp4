@@ -34,20 +34,42 @@ public class Menu
                     RemplirTablo();
 
                     // A vous de jouer
+                    for (int nb = 0; nb < unTab.length; nb++)
+                    {
+                        for (int nb2 = 0; nb2 < unTab[nb].length; nb2++)
+                        {
+                            System.out.print(unTab[nb][nb2]);
+                        }
+                    }
+                    System.out.println();
+
+
                     String mdp;
+                    String mdpCrypte = "";
                     System.out.println("Saisir votre Mdp : ");
                     mdp = bg.nextLine();
-                    for (int i = 0; i < unTab.length; i++)
+                    for (int i = 0; i < mdp.length(); i++)
                     {
-                        for (int j = 0; j < unTab[i].length; j++)
+                        boolean vrai = false;
+                        for (int j = 0; j < unTab[0].length; j++)
                         {
+                            if (mdp.charAt(i) == unTab[0][j])
+                            {
+                                mdpCrypte += unTab[1][j];
+                                vrai = true;
+                                break;
+                            }
+                            //Mettre mdp dans un tableau ?
                             //Recuperer l'indice de la lettre de mdp est la comparer a l'indice unTab[i][j]
                             //Si l'indice est present dans unTab alors il deviens l'indice present dans unTab
                             //Sinon si il n'est pas present dans unTab alors mettre "?"
                         }
+                        if (!vrai)
+                        {
+                            mdpCrypte += "?";
+                        }
                     }
-                    System.out.print("Mdp crypte : ");// Recuperation du mdp apres son passage dans unTab
-
+                    System.out.println("Mdp crypte : " + mdpCrypte);// Recuperation du mdp apres son passage dans unTab
 
                     break;
                 case 2:
