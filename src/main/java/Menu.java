@@ -43,11 +43,12 @@ public class Menu
                     }
                     System.out.println();
 
-
                     String mdp;
                     String mdpCrypte = "";
                     System.out.println("Saisir votre Mdp : ");
+                    bg.nextLine();
                     mdp = bg.nextLine();
+
                     for (int i = 0; i < mdp.length(); i++)
                     {
                         boolean vrai = false;
