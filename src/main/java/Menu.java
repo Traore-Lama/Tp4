@@ -87,14 +87,59 @@ public class Menu
                     // Exemple n°4  que des faces
                     //tabExo2 = new String[]{"F","F","F","F","F"};
 
-                    // A vous de jouer
+                    String chaine = "";
+                    for(String lettre : tabExo2)
+                    {
+                        chaine = chaine + lettre;
+                    }
+                    System.out.println("Chaine = " + chaine);
+                    int ok = 0;
+                    chaine = "";
+                    // On parcours le tableau
+                    for (int i = 0; i < tabExo2.length-1; i++)
+                    {
+                        // On test si la case courante et la suivante possèdent un "P" donc PILE
+                        if ((tabExo2[i].equals("P")) && (tabExo2[i + 1].equals("P")))
+                        {
+                            // Si c'est le cas on affiche l'indice de la case
+                            chaine = chaine + " - " + (i + 1);
+                            ok = 1;
+                        }
+                    }
+                    // Si on n'a pas trouvé de "P" consécutifs
+                    if (ok == 0)
+                    {
+                        System.out.println("Aucun pile consécutif");
+                    }
+                    else
+                    {
+                        System.out.println("Valeurs consécutives : " + chaine);
+                    }
 
                     break;
                 case 3:
                     tabExo3 = new int[]{4,8,3,6,1,9,12};
-
-                    // A vous de jouer
-
+                    chaine  = "";
+                    for(int i : tabExo3)
+                    {
+                        chaine = chaine + i + " - ";
+                    }
+                    System.out.println("Le tableau : " + chaine);
+                    // Inverser le tableau
+                    int temp;
+                    for(int i = 0 ; i < tabExo3.length / 2 ; i++)
+                    {
+                        temp = tabExo3[i];
+                        tabExo3[i] = tabExo3[tabExo3.length - i - 1];
+                        tabExo3[tabExo3.length - i -1] = temp;
+                    }
+                    chaine  = "";
+                    // Affichage du tableau maintenant qu'il est inversé
+                    for(int i : tabExo3)
+                    {
+                        chaine = chaine + i + " - ";
+                    }
+                    System.out.println("Le tableau inversé : " + chaine);
                     break;
             }
         }while (choix != 0);
